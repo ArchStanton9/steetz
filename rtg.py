@@ -41,12 +41,21 @@ def get_stamp(soup):
     respect = soup.new_tag('span')
     respect.string = "С уважением,"
     stamp.append(respect)
-
     stamp.append(soup.new_tag('br'))
 
     name = soup.new_tag('span')
     name.string = 'Владимир Владимирович Штец.'
     stamp.append(name)
+    stamp.append(soup.new_tag('br'))
+
+    phone = soup.new_tag('span')
+    phone.string = 'Телефон: +7 987 654-32-10'
+    stamp.append(phone)
+    stamp.append(soup.new_tag('br'))
+
+    requisites = soup.new_tag('span')
+    requisites.string = 'ИНН-КПП: 6663003127-668601001'
+    stamp.append(requisites)
 
     return stamp
 

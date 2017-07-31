@@ -1,5 +1,4 @@
 import sys, os
-import exchangelib
 from cx_Freeze import setup, Executable
 
 os.environ['TCL_LIBRARY'] = r'C:\Python36\tcl\tcl8.6'
@@ -15,5 +14,5 @@ if sys.platform == "win32":
 setup(name = "steetz",
       version = "1.0",
       description = "My application!",
-      options = {"build_exe": {"packages":["requests", "exchangelib", "idna", "lxml", "bs4", "requests"]}},
+      options = {"build_exe": {"packages":["requests", "urllib", "queue", "idna", "lxml", "bs4", "requests", 'httplib2', 'apiclient', 'oauth2client']}},
       executables = [Executable("steetz.py", base = base, shortcutName="sender")])
